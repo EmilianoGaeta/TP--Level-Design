@@ -27,7 +27,15 @@ public class CameraMovement : MonoBehaviour {
         timer = 0;
         text.text = "Points: " + poinsts;
     }
-    void LateUpdate()
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (playbutton.activeSelf) { Play(); }
+            if (restartButton.activeSelf) { Restart(); }
+        }
+    }
+    void FixedUpdate()
     {
         if (timer < Modifiers.initialTime)
         {
@@ -36,11 +44,6 @@ public class CameraMovement : MonoBehaviour {
         else
         {
             transform.position += Vector3.right * Modifiers.cameraSpeed * Time.deltaTime;
-        }
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if (playbutton.activeSelf) { Play(); }
-            if (restartButton.activeSelf) { Restart(); }
         }
     }
     public void Play()

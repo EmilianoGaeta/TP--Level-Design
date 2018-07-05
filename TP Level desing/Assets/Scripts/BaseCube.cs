@@ -34,8 +34,8 @@ public class BaseCube : MonoBehaviour {
     }
     public void Coin()
     {
-        var spike = Instantiate((GameObject)Resources.Load("Coin"));
-        spike.transform.position = transform.position + Vector3.up * transform.localScale.y;
+        var coin = Instantiate((GameObject)Resources.Load("Coin"));
+        coin.transform.position = transform.position + Vector3.up * transform.localScale.y;
     }
 
 }

@@ -69,7 +69,7 @@ public class Rules
                 block.GetComponent<MeshRenderer>().material.color = Color.blue;
 
                 var spikeChance = Random.Range(0, 100);//random para determinar si tiiene pinches
-                if (spikeChance < Modifiers.spikeChance && !matrizCubes[i - 1][j].spike && block.tamaño!= 0)
+                if (spikeChance < Modifiers.spikeChance && !matrizCubes[i - 1][j].spike /*&& block.tamaño!= 0*/)
                 {
                     block.Spike();
                 }
