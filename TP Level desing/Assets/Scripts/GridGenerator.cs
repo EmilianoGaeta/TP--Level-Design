@@ -75,7 +75,7 @@ public class GridGenerator : MonoBehaviour {
                     character.transform.position = block.transform.position;
                 }
                 //Puerta Final
-                if (i== gridWidth - 2 * cubes.transform.localScale.x && j == 1)
+                if (i== gridWidth - 2 && j == 1)
                 {
                     block.exists = false; var finalDoor = Instantiate(puertaEnd); finalDoor.transform.position = block.transform.position+ Vector3.up * cubes.transform.localScale.y / 2;
                 }

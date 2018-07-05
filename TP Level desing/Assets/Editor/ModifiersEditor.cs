@@ -53,9 +53,9 @@ public class ManEditor : Editor
         EditorGUILayout.Space();
         values.initialtime = EditorGUILayout.Slider("Initial Time", values.initialtime, 2, 5);
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Min 30, Max 100");
+        EditorGUILayout.LabelField("Min 30, Max 150");
         values.levellenght = EditorGUILayout.IntField("Level Size", values.levellenght);
         if (values.levellenght < 30) { values.levellenght = 30; }
-        if (values.levellenght > 100) { values.levellenght = 100; }
+        if (values.levellenght > 150) { values.levellenght = 150; }
     }
 }
